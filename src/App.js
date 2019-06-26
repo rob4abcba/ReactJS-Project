@@ -1,6 +1,7 @@
 import React from 'react';
 import Todos from './components/Todos';
 import './App.css';
+import Message from './components/Message';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
+      <Message />
       <Todos />
     </div>
   );
