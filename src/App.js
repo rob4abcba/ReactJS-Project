@@ -2,6 +2,7 @@ import React from 'react';
 import Todos from './components/Todos';
 import './App.css';
 import Message from './components/Message';
+import Counter from './components/Counter';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
+      <Counter />
       <Message />
       <Todos />
     </div>
