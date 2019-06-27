@@ -3,6 +3,7 @@ import Todos from './components/Todos';
 import './App.css';
 import Message from './components/Message';
 import Counter from './components/Counter';
+import Greet from './components/Greet';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
+      <Greet />
       <Counter />
       <Message />
       <Todos />
