@@ -3,7 +3,7 @@ import Todos from './components/Todos';
 import './App.css';
 import Message from './components/Message';
 import Counter from './components/Counter';
-import Greet from './components/Greet';
+import {Greet} from './components/Greet';
 
 class App extends React.Component {
   constructor(props) {
