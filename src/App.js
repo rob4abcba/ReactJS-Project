@@ -4,6 +4,7 @@ import './App.css';
 import Message from './components/Message';
 import Counter from './components/Counter';
 import MyGreet from './components/Greet';
+import Welcome from './components/Welcome';
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends React.Component {
   return (
     <div className="App">
       <MyGreet />
+      <Welcome />
       <Counter />
       <Message />
       <Todos />
