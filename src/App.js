@@ -33,8 +33,12 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      <MyGreet name="Clark" heroName="Superman"/>
-      <MyGreet name="Bruce" heroName="Batman" />
+      <MyGreet name="Clark" heroName="Superman">
+        <p>Optional p section</p>
+      </MyGreet>
+      <MyGreet name="Bruce" heroName="Batman">
+        <button>Awesome button</button>
+      </MyGreet>
       <Welcome />
       <Hello />
       <Counter />
