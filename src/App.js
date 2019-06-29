@@ -8,6 +8,7 @@ import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
+import EventBind from './components/EventBind';
 
 class App extends React.Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class App extends React.Component {
         <Message />
         <FunctionClick />
         <ClassClick />
+        <EventBind />
         <Todos />
       </div>
     );
