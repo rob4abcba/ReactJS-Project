@@ -6,6 +6,7 @@ import Counter from './components/Counter';
 import MyGreet from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
+import FunctionClick from './components/FunctionClick';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class App extends React.Component {
         <Hello />
         <Counter />
         <Message />
+        <FunctionClick />
         <Todos />
       </div>
     );
