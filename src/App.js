@@ -7,6 +7,7 @@ import MyGreet from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import FunctionClick from './components/FunctionClick';
+import ClassClick from './components/ClassClick';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,6 +49,7 @@ class App extends React.Component {
         <Counter />
         <Message />
         <FunctionClick />
+        <ClassClick />
         <Todos />
       </div>
     );
