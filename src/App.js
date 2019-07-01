@@ -10,6 +10,7 @@ import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <UserGreeting />
         <ParentComponent />
         <MyGreet name="Clark" heroName="Superman">
           <p>Optional p section</p>
