@@ -5,19 +5,24 @@ class UserGreeting extends Component {
         super(props)
 
         this.state = {
-            isLoggedIn: true
+            isLoggedIn: false
         }
     }
 
     render() {
-        // Method 3:
+        // Method 4: Short-Circuit Operator
         return(
-            this.state.isLoggedIn ?
-            <div>Welcome Tom Brady</div> :
-            <div>Welcome Peyton Manning Guest</div>
+            this.state.isLoggedIn && <div>Welcome Doogie Howser</div>
         )
 
-        // Method 2:        
+        // // Method 3: Tertiary Conditional Operator
+        // return(
+        //     this.state.isLoggedIn ?
+        //     <div>Welcome Tom Brady</div> :
+        //     <div>Welcome Peyton Manning Guest</div>
+        // )
+
+        // Method 2: Element Variables        
         // let message
         // if (this.state.isLoggedIn) {
         //     message = <div>Welcome Peter</div>
@@ -26,7 +31,7 @@ class UserGreeting extends Component {
         // }
         // return <div>{message}</div>
 
-        // Method 1:
+        // Method 1: if ... else ...
         // if (this.state.isLoggedIn) {
         //     return (
         //         <div>
