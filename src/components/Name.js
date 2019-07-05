@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Name({name}) {
+function Name({name}, {index}) {
     return (
         <div>
             <h2>
-                I am {name.firstName}.
+                {index} I am {name.firstName}.
             </h2>
         </div>
     )

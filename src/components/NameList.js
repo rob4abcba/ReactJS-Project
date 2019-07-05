@@ -3,20 +3,21 @@ import Person from './Person'
 import Name from './Name'
 
 function NameList() {
-    const names = [
-        {
-            firstName: 'Bruce',
-            lastName: "Wayne"
-        },
-        {
-            firstName: 'Clark',
-            lastName: "Kent"
-        },
-        {
-            firstName: 'Diana',
-            lastName: "WonderWoman"
-        }
-    ]
+    const names = ["Bruce", "Clark", "Bruce"]
+    // const names = [
+    //     {
+    //         firstName: 'Bruce',
+    //         lastName: "Wayne"
+    //     },
+    //     {
+    //         firstName: 'Clark',
+    //         lastName: "Kent"
+    //     },
+    //     {
+    //         firstName: 'Bruce',
+    //         lastName: "WonderWoman"
+    //     }
+    // ]
 
     const persons = [
         {
@@ -36,8 +37,8 @@ function NameList() {
         }
     ]
 
-    // const nameList = names.map(name => <h2>{name}</h2>)
-    const nameList = names.map(name => <Name key={name.firstName} name={name} />)
+    const nameList = names.map( (name, index) => <h2 key={index}>{index} {name}</h2>)
+    // const nameList = names.map( (name,index) => <Name key={index} index={index} name={name} />)
     const personList = persons.map(person => <Person key={person.name} person={person} />)
 
     return (
