@@ -17,6 +17,7 @@ import Inline from './components/Inline'
 import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form'
+import LifecycleA from './components/LifecycleA'
 
 class App extends React.Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <LifecycleA />
         <Form />
         <h1 className='error'>Error</h1>
         <h1 className={styles.success}>Success</h1>
