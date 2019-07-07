@@ -35,26 +35,31 @@ class Form extends Component {
     }
 
     render() {
+        // As code cleanup, destructure state in render method, so can omit this.state. from the value= expressions.
+        const { username, comments, topic } = this.state
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <label> Username </label>
                     <input
                         type='text'
-                        value={this.state.username}
+                        // value={this.state.username}
+                        value={username}
                         onChange={this.handleUsernameChange}
                     />
                 </div>
                 <div>
                     <label> Comments </label>
                     <textarea
-                        value={this.state.comments}
+                        // value={this.state.comments}
+                        value={comments}
                         onChange={this.handleCommentsChange}
                     />
                 </div>
                 <div>
                     <label> Topic </label>
-                    <select value={this.state.topic} onChange={this.handleTopicChange}>
+                    {/* <select value={this.state.topic} onChange={this.handleTopicChange}> */}
+                    <select value={topic} onChange={this.handleTopicChange}>   
                         <option value="react">React</option>
                         <option value="angular">Angular</option>
                         <option value="vue">Vue</option>
