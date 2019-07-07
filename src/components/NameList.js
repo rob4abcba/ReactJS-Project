@@ -44,6 +44,7 @@ function NameList() {
     return (
         <div>
             {nameList}, {personList}
+            <Name />
         </div>
     )
 }

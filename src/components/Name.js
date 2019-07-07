@@ -4,7 +4,7 @@ function Name({name}, {index}) {
     return (
         <div>
             <h2>
-                {index} I am {name.firstName}.
+                {index} I am {name}.
             </h2>
         </div>
     )
