@@ -18,6 +18,7 @@ import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form'
 import LifecycleA from './components/LifecycleA'
+import FragmentDemo from './components/FragmentDemo';
 
 class App extends React.Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <FragmentDemo />
         <LifecycleA />
         <Form />
         <h1 className='error'>Error</h1>
