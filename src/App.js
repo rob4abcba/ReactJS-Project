@@ -50,10 +50,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <RefsDemo />
-        <ParentComp />
+        {/* <ParentComp /> */}
         <Table />
         <FragmentDemo />
-        <LifecycleA />
+        {/* <LifecycleA /> */}
         <Form />
         <h1 className='error'>Error</h1>
         <h1 className={styles.success}>Success</h1>
