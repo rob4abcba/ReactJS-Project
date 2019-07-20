@@ -1,5 +1,5 @@
 import React from 'react';
-import Todos from './components/Todos';
+import Todos1 from './components/Todos1';
 import './App.css';
 import Message from './components/Message';
 import Counter from './components/Counter';
@@ -25,34 +25,35 @@ import RefsDemo from './components/RefsDemo';
 import FocusInput from './components/FocusInput'
 import FRParentInput from './components/FRParentInput'
 import PortalDemo from './components/PortalDemo';
+import Todos2 from './Todos2';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      todos: [
-        {
-          id: 1,
-          title: 'Take out the garbage',
-          completed: false
-        },
-        {
-          id: 2,
-          title: 'Eat dinner',
-          completed: false
-        },
-        {
-          id: 3,
-          title: 'Do taxes',
-          completed: false
-        }
-      ]
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     todos1: [
+  //       {
+  //         id: 1,
+  //         title: 'Take out the garbage',
+  //         completed: false
+  //       },
+  //       {
+  //         id: 2,
+  //         title: 'Eat dinner',
+  //         completed: false
+  //       },
+  //       {
+  //         id: 3,
+  //         title: 'Do taxes',
+  //         completed: false
+  //       }
+  //     ]
+  //   };
+  // }
 
   state = {
-    todos: [
-      {id:1, content: 'Buy milk'},
+    todos2: [
+      {id: 1, content: 'Buy milk'},
       {id: 2, content: 'Play Mario'}
     ]
   }
@@ -60,6 +61,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <h1 className="center blue-text">Todo's</h1>
+        <Todos2 todos2={this.state.todos2}/>
         <PortalDemo />
         <FRParentInput />
         <FocusInput />
@@ -92,7 +95,7 @@ class App extends React.Component {
         <FunctionClick />
         <ClassClick />
         <EventBind />
-        <Todos />
+        <Todos1 />
       </div>
     );
   }
