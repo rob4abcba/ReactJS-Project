@@ -57,12 +57,21 @@ class App extends React.Component {
       {id: 2, content: 'Play Mario'}
     ]
   }
+  deleteTodo = (id) => {
+    // console.log(id);
+    const todos2 = this.state.todos2.filter(todo2 => {
+      return todo2.id !== id
+    })
+    this.setState({
+      todos2: todos2
+    })
+  }
 
   render() {
     return (
-      <div className="App">
+      <div className="todo-app container">
         <h1 className="center blue-text">Todo's</h1>
-        <Todos2 todos2={this.state.todos2}/>
+        <Todos2 todos2={this.state.todos2} deleteTodo={this.deleteTodo}/>
         <PortalDemo />
         <FRParentInput />
         <FocusInput />
