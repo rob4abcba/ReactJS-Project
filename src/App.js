@@ -26,6 +26,7 @@ import FocusInput from './components/FocusInput'
 import FRParentInput from './components/FRParentInput'
 import PortalDemo from './components/PortalDemo';
 import Todos2 from './Todos2';
+import AddTodo2 from './AddTodo2'
 
 class App extends React.Component {
   // constructor(props) {
@@ -58,10 +59,17 @@ class App extends React.Component {
     ]
   }
   deleteTodo = (id) => {
-    // console.log(id);
+    console.log(id);
     const todos2 = this.state.todos2.filter(todo2 => {
       return todo2.id !== id
     })
+    this.setState({
+      todos2: todos2
+    })
+  }
+  addTodo2 = (todo2) => {
+    todo2.id = Math.random();
+    let todos2 = [...this.state.todos2, todo2];
     this.setState({
       todos2: todos2
     })
@@ -72,6 +80,7 @@ class App extends React.Component {
       <div className="todo-app container">
         <h1 className="center blue-text">Todo's</h1>
         <Todos2 todos2={this.state.todos2} deleteTodo={this.deleteTodo}/>
+        <AddTodo2 addTodo2={this.addTodo2} />
         <PortalDemo />
         <FRParentInput />
         <FocusInput />
