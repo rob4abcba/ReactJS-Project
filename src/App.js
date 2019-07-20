@@ -24,6 +24,7 @@ import ParentComp from './components/ParentComp';
 import RefsDemo from './components/RefsDemo';
 import FocusInput from './components/FocusInput'
 import FRParentInput from './components/FRParentInput'
+import PortalDemo from './components/PortalDemo';
 
 class App extends React.Component {
   constructor(props) {
@@ -48,9 +49,18 @@ class App extends React.Component {
       ]
     };
   }
+
+  state = {
+    todos: [
+      {id:1, content: 'Buy milk'},
+      {id: 2, content: 'Play Mario'}
+    ]
+  }
+
   render() {
     return (
       <div className="App">
+        <PortalDemo />
         <FRParentInput />
         <FocusInput />
         <RefsDemo />
